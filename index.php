@@ -20,7 +20,7 @@ $router->map('POST','/', function(){
         $response = $client->request('GET', 'weather/hava-durumu-api');
         $responseData = json_decode($response->getBody(), true);
         print_r($responseData);
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         echo "API isteği sırasında bir hata oluştu: " . $e->getMessage();
     }
     
