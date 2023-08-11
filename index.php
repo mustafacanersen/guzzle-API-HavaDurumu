@@ -27,7 +27,7 @@ $router->map('POST','/', function(){
             echo "<div class='weather-container' style='display:flex;width: 100%;align-items: center;justify-content: center;justify-content: space-around;'>";
 
             foreach ($result['result'] as $weatherData) {
-                echo "<div class='card' style='border-style:solid; border-width: 1px; border-color: white;width: 200px;height: auto; display: flex; flex-direction: column; align-items: center;background-color: rgba(115, 228, 250, 0.3);box-shadow: 2px 2px 2px 2px white;border-radius: 5px 5px 5px 5px;'>
+                echo "<div class='card' style='border-style:solid; border-width: 1px; border-color: white;width: 200px;height: auto; display: flex; flex-direction: column; align-items: center;background-color: rgba(115, 228, 250, 0.3);box-shadow: inset 0px 0px 10px rgba(255,255,255,0.9);border-radius: 5px 5px 5px 5px;'>
                         <p>" . $weatherData['date'] . "</p>
                         <p>" . ucfirst($result['city']) . "</p>
                         <img src='" . $weatherData['icon'] . "' style='width: 100px; height: auto;'>
